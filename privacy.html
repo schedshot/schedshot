@@ -1,0 +1,563 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Privacy Policy — SchedShot</title>
+  <meta
+    name="description"
+    content="SchedShot Privacy Policy."
+  />
+
+  <style>
+    :root {
+      --bg: #07090d;
+      --panel: #10141c;
+      --text: #f5f7fb;
+      --muted: #9aa4b2;
+      --blue: #2ea8ff;
+      --cyan: #31e6ff;
+      --green: #43d17c;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "Segoe UI",
+        sans-serif;
+      background:
+        radial-gradient(circle at 15% 8%, rgba(46,168,255,.15), transparent 28%),
+        radial-gradient(circle at 85% 5%, rgba(49,230,255,.07), transparent 22%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1000px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
+      background: linear-gradient(145deg, var(--cyan), var(--blue));
+      box-shadow:
+        0 0 30px rgba(46,168,255,.3),
+        inset 0 1px 0 rgba(255,255,255,.35);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .hero {
+      padding: 90px 0 54px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,.035);
+      color: #b8c3d1;
+      font-size: .84rem;
+      margin-bottom: 24px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 14px var(--green);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3.3rem, 8vw, 6rem);
+      line-height: .95;
+      letter-spacing: -0.06em;
+      font-weight: 850;
+    }
+
+    .gradient-text {
+      background:
+        linear-gradient(100deg, #ffffff 15%, #8fdcff 55%, #ffffff 90%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 660px;
+      margin: 25px 0 0;
+      color: var(--muted);
+      font-size: 1.12rem;
+      line-height: 1.65;
+    }
+
+    .updated {
+      margin-top: 18px;
+      color: #697484;
+      font-size: .9rem;
+    }
+
+    .policy {
+      padding: 20px 0 100px;
+    }
+
+    .policy-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.018));
+      box-shadow: 0 35px 100px rgba(0,0,0,.35);
+      padding: clamp(28px, 6vw, 60px);
+    }
+
+    .policy-card::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      top: -150px;
+      right: -120px;
+      border-radius: 999px;
+      background: rgba(46,168,255,.08);
+      filter: blur(12px);
+      pointer-events: none;
+    }
+
+    .policy-section {
+      position: relative;
+      padding: 0 0 38px;
+      margin-bottom: 38px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-section:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.6rem;
+      letter-spacing: -0.035em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      color: var(--muted);
+      line-height: 1.75;
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .highlight {
+      color: #eaf8ff;
+    }
+
+    .privacy-callout {
+      margin: 34px 0 0;
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(67,209,124,.06);
+      border: 1px solid rgba(67,209,124,.15);
+    }
+
+    .privacy-callout strong {
+      display: block;
+      color: #b8f4cf;
+      margin-bottom: 6px;
+    }
+
+    .contact {
+      display: inline-block;
+      margin-top: 4px;
+      color: var(--cyan);
+    }
+
+    .contact:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 34px 0 50px;
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    @media (max-width: 680px) {
+      .nav-links {
+        gap: 14px;
+        font-size: .85rem;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <nav>
+      <a href="index.html" class="brand">
+        <div class="brand-mark"></div>
+        SchedShot
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </nav>
+
+    <main>
+
+      <section class="hero">
+
+        <div class="eyebrow">
+          <span class="dot"></span>
+          Private by design
+        </div>
+
+        <h1>
+          Your schedule<br>
+          <span class="gradient-text">stays yours.</span>
+        </h1>
+
+        <p>
+          SchedShot is designed to perform its core functions directly on your
+          device without collecting, storing, or transmitting your personal
+          information to the developer.
+        </p>
+
+        <div class="updated">
+          Effective September 25, 2026
+        </div>
+
+      </section>
+
+
+      <section class="policy">
+
+        <div class="policy-card">
+
+          <div class="policy-section">
+
+            <h2>Information Collection</h2>
+
+            <p>
+              SchedShot does not collect, store, transmit, sell, or share
+              personal information.
+            </p>
+
+            <p>
+              The app does not require an account and does not use advertising,
+              tracking technologies, or third-party analytics services.
+            </p>
+
+            <div class="privacy-callout">
+              <strong>No account. No tracking. No uploaded schedules.</strong>
+              Your schedule processing happens on your device.
+            </div>
+
+          </div>
+
+
+          <div class="policy-section">
+
+            <h2>Screenshot and Image Processing</h2>
+
+            <p>
+              SchedShot allows you to provide screenshots or images containing
+              work schedule information.
+            </p>
+
+            <p>
+              Image and text recognition is performed locally on your device
+              using Apple's Vision framework.
+            </p>
+
+            <p>
+              Images and information extracted from them are not uploaded to
+              SchedShot servers or transmitted to the developer.
+            </p>
+
+            <p>
+              SchedShot does not maintain a remote copy of your screenshots or
+              extracted schedule information.
+            </p>
+
+          </div>
+
+
+          <div class="policy-section">
+
+            <h2>Calendar Access</h2>
+
+            <p>
+              SchedShot requests access to your device's calendar so that it can
+              read calendar information and create calendar events based on the
+              schedules you provide.
+            </p>
+
+            <p>Calendar access may be used to:</p>
+
+            <ul>
+              <li>Create calendar events from recognized work shifts.</li>
+              <li>
+                Read existing calendar events as necessary for scheduling
+                functionality.
+              </li>
+              <li>
+                Help prevent duplicate or conflicting schedule entries.
+              </li>
+            </ul>
+
+            <p>
+              Calendar information is processed on your device and is not
+              transmitted to the developer or to SchedShot servers.
+            </p>
+
+            <p>
+              You can change or revoke SchedShot's calendar permissions at any
+              time through your device's privacy settings.
+            </p>
+
+          </div>
+
+
+          <div class="policy-section">
+
+            <h2>Photos and Images</h2>
+
+            <p>
+              When you choose an image or screenshot for processing, SchedShot
+              accesses only the content made available to the app through
+              Apple's system interfaces and permissions.
+            </p>
+
+            <p>
+              The selected content is used to identify schedule information and
+              provide the app's requested functionality.
+            </p>
+
+            <p>
+              SchedShot does not upload these images to the developer.
+            </p>
+
+          </div>
+
+
+          <div class="policy-section">
+
+            <h2>Data Sharing</h2>
+
+            <p>
+              Because SchedShot does not collect personal data, the developer
+              does not sell, rent, or share personal data with advertisers,
+              data brokers, or other third parties.
+            </p>
+
+          </div>
+
+
+          <div class="policy-section">
+
+            <h2>Tracking and Advertising</h2>
+
+            <p>
+              SchedShot does not track users across apps or websites.
+            </p>
+
+            <p>
+              SchedShot does not contain third-party advertising and does not
+              use user information for advertising or marketing purposes.
+            </p>
+
+          </div>
+
+
+          <div class="policy-section">
+
+            <h2>Children's Privacy</h2>
+
+            <p>
+              SchedShot does not knowingly collect personal information from
+              children.
+            </p>
+
+            <p>
+              Because the app does not collect personal information from its
+              users, no personal information about children is knowingly
+              transmitted to or retained by the developer.
+            </p>
+
+          </div>
+
+
+          <div class="policy-section">
+
+            <h2>Data Security</h2>
+
+            <p>
+              SchedShot is designed to minimize privacy risks by processing
+              schedule information and images locally on your device rather than
+              transmitting them to the developer.
+            </p>
+
+            <p>
+              Your information may still be subject to the security and privacy
+              practices of Apple and services you have configured on your
+              device, such as iCloud Calendar.
+            </p>
+
+          </div>
+
+
+          <div class="policy-section">
+
+            <h2>Changes to This Privacy Policy</h2>
+
+            <p>
+              This Privacy Policy may be updated if SchedShot's features or data
+              practices change.
+            </p>
+
+            <p>
+              Any updated policy will include a revised effective date.
+            </p>
+
+          </div>
+
+
+          <div class="policy-section">
+
+            <h2>Contact</h2>
+
+            <p>
+              If you have questions or concerns about this Privacy Policy or
+              SchedShot's privacy practices, contact:
+            </p>
+
+            <p>
+              <span class="highlight">Christopher Newman</span><br>
+              <a class="contact" href="mailto:schedshot@icloud.com">
+                schedshot@icloud.com
+              </a>
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <footer>
+
+    <div class="wrap footer-row">
+
+      <div>
+        © 2026 Christopher Newman
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:schedshot@icloud.com">Contact</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
