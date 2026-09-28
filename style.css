@@ -35,6 +35,7 @@
 }
 
 html {
+  overflow-y: scroll;
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
 }
@@ -113,7 +114,8 @@ nav {
 }
 
 .nav-links {
-  display: flex;
+  display: grid;
+  grid-template-columns: 8ch 8ch 8ch 88px;
   align-items: center;
   gap: 22px;
   color: var(--muted);
@@ -123,6 +125,7 @@ nav {
 .nav-links a {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 44px;
 }
 
@@ -141,6 +144,7 @@ nav {
   justify-content: center;
   gap: 7px;
   min-height: 44px;
+  width: 88px;
   min-width: 88px;
   flex-shrink: 0;
   padding: 0 14px;
@@ -891,6 +895,7 @@ html[data-theme="light"] .highlight {
 
 @media (max-width: 760px) {
   .nav-links {
+    grid-template-columns: 8ch 8ch 8ch 44px;
     gap: 14px;
 
     font-size: 0.85rem;
@@ -959,7 +964,11 @@ a:focus-visible, button:focus-visible {
   outline: 3px solid var(--blue);
   outline-offset: 4px;
 }
-.nav-links { flex-wrap: wrap; }
+/* Keep the toggle slot reserved before theme.js initializes. */
+.theme-toggle[hidden] {
+  display: inline-flex !important;
+  visibility: hidden;
+}
 .nav-links a[aria-current="page"] { color: var(--text); }
 .footer-links { flex-wrap: wrap; }
 .card, .mock-copy, .phone { min-width: 0; }
@@ -968,7 +977,10 @@ a:focus-visible, button:focus-visible {
   .wrap {
     width: calc(100% - 28px);
   }
-  .nav-links { gap: 8px; }
+  .nav-links {
+    grid-template-columns: 7ch 7ch 7ch 44px;
+    gap: 4px;
+  }
   .app-preview { padding: 12px; }
   .mock-window { padding: 20px; }
 }
