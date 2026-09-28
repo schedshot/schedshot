@@ -1,360 +1,205 @@
+<!doctype html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8" />
-
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1"
   />
-
   <title>
     Support — SchedShot
   </title>
-
   <meta
     name="description"
     content="Get help with SchedShot."
   />
-<script>
-  (() => {
-    const savedTheme = localStorage.getItem("schedshot-theme");
-
-    const theme =
-      savedTheme ||
-      (window.matchMedia("(prefers-color-scheme: light)").matches
-        ? "light"
-        : "dark");
-
-    document.documentElement.dataset.theme = theme;
-  })();
-</script>
   <link
     rel="icon"
     type="image/png"
     href="schedshot-icon.png"
   />
-
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="style.css">
-
 </head>
-
-<!-- support.html -->
 <body class="support-page">
-
   <div class="wrap">
-
-    <nav>
-
+    <nav aria-label="Main navigation">
       <a
         href="index.html"
         class="brand"
       >
-
         <img
           class="brand-icon"
           src="schedshot-icon.png"
           alt="SchedShot"
         />
-
         SchedShot
-
       </a>
-
-
 <div class="nav-links">
-
   <a href="index.html">Home</a>
-  <a href="support.html">Support</a>
+  <a href="support.html" aria-current="page">Support</a>
   <a href="privacy.html">Privacy</a>
-
   <button
     class="theme-toggle"
     id="theme-toggle"
     type="button"
     aria-label="Switch appearance"
+    hidden
   >
-    <span id="theme-icon">☀︎</span>
+    <span id="theme-icon" aria-hidden="true">☀︎</span>
     <span class="theme-label" id="theme-label">Light</span>
   </button>
-
 </div>
-
     </nav>
-
-
     <main>
-
       <section class="hero">
-
         <div class="eyebrow">
-
           <span class="dot"></span>
-
           SchedShot Support
-
         </div>
-
-
         <h1>
-
           Need a hand?<br>
-
           <span class="gradient-text">
             We're here.
           </span>
-
         </h1>
-
-
         <p>
           Having trouble with SchedShot, found a bug, or
           have an idea for something that would make the
           app better? Get in touch.
         </p>
-
       </section>
-
-
-
       <section class="support">
-
         <div class="grid">
-
-
           <div class="card">
-
             <div class="support-icon">
               ✉
             </div>
-
             <h2>
               Contact Support
             </h2>
-
             <p>
               The easiest way to get help is by email.
               Tell us what happened and we'll take a
               look.
             </p>
-
             <a
               class="button"
               href="mailto:schedshot@icloud.com"
             >
               Email Support
             </a>
-
           </div>
-
-
           <div class="card">
-
             <div class="support-icon green">
               ✓
             </div>
-
             <h2>
               Before You Send
             </h2>
-
             <p>
               A few details can make troubleshooting
               much faster.
             </p>
-
             <ul class="tips">
-
               <li>
                 Your device model
               </li>
-
               <li>
                 Your iOS, iPadOS, or macOS version
               </li>
-
               <li>
                 A short description of what happened
               </li>
-
               <li>
                 A screenshot if it helps explain
                 the issue
               </li>
-
             </ul>
-
           </div>
-
-
           <div class="card">
-
             <div class="support-icon orange">
               ⌗
             </div>
-
             <h2>
               Schedule Recognition
             </h2>
-
             <p>
               If SchedShot doesn't recognize a shift
               correctly, try using a clear screenshot
               with the dates, times, and schedule
               information visible.
             </p>
-
           </div>
-
-
           <div class="card">
-
             <div class="support-icon">
               ◫
             </div>
-
             <h2>
               Calendar Access
             </h2>
-
             <p>
               SchedShot needs calendar permission to
               read existing events and create your
               work shifts.
             </p>
-
-            <p style="margin-top:12px;">
+            <p class="spaced-paragraph">
               You can review or change SchedShot's
               calendar access in your device's privacy
               settings.
             </p>
-
           </div>
-
-
           <div class="card large">
-
             <div class="support-icon green">
               ●
             </div>
-
             <h2>
               Your schedule stays private.
             </h2>
-
             <p>
               SchedShot processes schedule screenshots
               directly on your device using Apple's
               Vision framework.
-
               Your screenshots and extracted schedule
               information are not uploaded to
               SchedShot servers.
             </p>
-
-
             <div class="privacy-callout">
-
               <strong>
                 No accounts. No tracking.
                 No uploaded schedules.
               </strong>
-
               SchedShot is designed to keep schedule
               processing on your device.
-
             </div>
-
-
             <a
               class="button secondary"
               href="privacy.html"
             >
               Read the Privacy Policy
             </a>
-
           </div>
-
-
         </div>
-
       </section>
-
     </main>
-
   </div>
-
-
-
   <footer>
-
     <div class="wrap footer-row">
-
       <div>
         © 2026 Christopher Newman
       </div>
-
-
       <div class="footer-links">
-
         <a href="index.html">
           Home
         </a>
-
         <a href="privacy.html">
           Privacy
         </a>
-
         <a href="mailto:schedshot@icloud.com">
           Contact
         </a>
-
       </div>
-
     </div>
-
   </footer>
-
-<script>
-  const toggle = document.getElementById("theme-toggle");
-  const icon = document.getElementById("theme-icon");
-  const label = document.getElementById("theme-label");
-
-  function updateThemeButton() {
-    const theme = document.documentElement.dataset.theme;
-
-    if (theme === "dark") {
-      icon.textContent = "☀︎";
-      label.textContent = "Light";
-      toggle.setAttribute("aria-label", "Switch to light mode");
-    } else {
-      icon.textContent = "☾";
-      label.textContent = "Dark";
-      toggle.setAttribute("aria-label", "Switch to dark mode");
-    }
-  }
-
-  toggle.addEventListener("click", () => {
-    const currentTheme =
-      document.documentElement.dataset.theme;
-
-    const newTheme =
-      currentTheme === "dark"
-        ? "light"
-        : "dark";
-
-    document.documentElement.dataset.theme =
-      newTheme;
-
-    localStorage.setItem(
-      "schedshot-theme",
-      newTheme
-    );
-
-    updateThemeButton();
-  });
-
-  updateThemeButton();
-</script>
 </body>
 </html>

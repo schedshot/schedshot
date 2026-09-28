@@ -1,396 +1,221 @@
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>SchedShot</title>
-
   <meta
     name="description"
     content="Turn screenshots of your work schedule into calendar events."
   />
-<script>
-  (() => {
-    const savedTheme = localStorage.getItem("schedshot-theme");
-
-    const theme =
-      savedTheme ||
-      (window.matchMedia("(prefers-color-scheme: light)").matches
-        ? "light"
-        : "dark");
-
-    document.documentElement.dataset.theme = theme;
-  })();
-</script>
   <link
     rel="icon"
     type="image/png"
     href="schedshot-icon.png"
   />
-
-<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<!-- index.html -->
 <body class="home-page">
-
   <div class="wrap">
-
-    <nav>
-
+    <nav aria-label="Main navigation">
       <a href="index.html" class="brand">
-
         <img
           class="brand-icon"
           src="schedshot-icon.png"
           alt="SchedShot"
         />
-
         SchedShot
-
       </a>
-
       <div class="nav-links">
-
         <a href="#features">
           Features
         </a>
-
         <a href="support.html">
           Support
         </a>
-
         <a href="privacy.html">
           Privacy
         </a>
-        
           <button
     class="theme-toggle"
     id="theme-toggle"
     type="button"
     aria-label="Switch appearance"
+    hidden
   >
-    <span id="theme-icon">☀︎</span>
+    <span id="theme-icon" aria-hidden="true">☀︎</span>
     <span class="theme-label" id="theme-label">Light</span>
   </button>
-
       </div>
-
     </nav>
-
-
     <main>
-
       <section class="hero">
-
         <div class="hero-icon-wrap">
-
           <img
             src="schedshot-icon.png"
             alt="SchedShot app icon"
             class="hero-icon"
           />
-
         </div>
-
-
         <div class="eyebrow">
-
           <span class="dot"></span>
-
           Your schedule, minus the typing
-
         </div>
-
-
         <h1>
-
           Screenshot it.<br>
-
           <span class="gradient-text">
             Schedule it.
           </span>
-
         </h1>
-
-
         <p>
           SchedShot turns screenshots of your work schedule
           into calendar events so you can spend less time
           entering shifts and more time doing literally
           anything else.
         </p>
-
-
         <div class="buttons">
-
           <a
             class="button primary"
             href="#features"
           >
             See how it works
           </a>
-
           <a
             class="button secondary"
             href="support.html"
           >
             Support
           </a>
-
         </div>
-
-
         <div class="app-preview">
-
           <div class="mock-window">
-
-
             <div class="mock-copy">
-
               <h2>
                 From screenshot to calendar.
               </h2>
-
               <p>
                 Pick a schedule image, review the detected
                 shifts, and add them to your calendar in a
                 few taps.
               </p>
-
             </div>
-
-
             <div class="phone">
-
               <div class="phone-title">
                 Upcoming Work Shifts
               </div>
-
               <div class="shift">
                 <b>4:00 PM – 8:30 PM</b>
                 <span>Sunday · Sep 27</span>
               </div>
-
               <div class="shift">
                 <b>5:00 PM – 8:30 PM</b>
                 <span>Wednesday · Sep 30</span>
               </div>
-
               <div class="shift">
                 <b>5:00 PM – 8:30 PM</b>
                 <span>Thursday · Oct 1</span>
               </div>
-
             </div>
-
-
           </div>
-
         </div>
-
       </section>
-
-
-
       <section id="features">
-
-
         <div class="section-head">
-
           <h2>
             Built for people with shifts.
           </h2>
-
           <p>
             Whether you're working retail, food service,
             construction, healthcare, or anywhere else with
             changing schedules, SchedShot removes the
             repetitive part.
           </p>
-
         </div>
-
-
         <div class="grid">
-
-
           <div class="card">
-
             <div class="feature-icon">
               ⌗
             </div>
-
             <h3>
               Grab a screenshot
             </h3>
-
             <p>
               Use the schedule image you already have
               instead of manually entering every shift.
             </p>
-
           </div>
-
-
           <div class="card">
-
             <div class="feature-icon">
               ✦
             </div>
-
             <h3>
               Recognized on device
             </h3>
-
             <p>
               SchedShot uses Apple's Vision technology to
               identify schedule information directly on
               your device.
             </p>
-
           </div>
-
-
           <div class="card">
-
             <div class="feature-icon">
               ✓
             </div>
-
             <h3>
               Review and add
             </h3>
-
             <p>
               Confirm the shifts SchedShot found, then add
               them to your calendar.
             </p>
-
           </div>
-
-
         </div>
-
       </section>
-
-
-
       <section>
-
         <div class="card privacy">
-
-
           <div class="section-head">
-
             <h2>
               Private by design.
             </h2>
-
             <p>
               Your schedule screenshots are processed
               locally using Apple's Vision framework.
-
               SchedShot does not upload your screenshots
               or schedule information to our servers.
             </p>
-
           </div>
-
-
           <div
-            class="buttons"
-            style="justify-content:flex-start;"
+            class="buttons left"
           >
-
             <a
               class="button secondary"
               href="privacy.html"
             >
               Read the Privacy Policy
             </a>
-
           </div>
-
-
         </div>
-
       </section>
-
-
     </main>
-
-
     <footer>
-
       <div class="footer-row">
-
         <div>
           © 2026 Christopher Newman
         </div>
-
         <div class="footer-links">
-
           <a href="support.html">
             Support
           </a>
-
           <a href="privacy.html">
             Privacy
           </a>
-
           <a href="mailto:schedshot@icloud.com">
             Contact
           </a>
-
         </div>
-
       </div>
-
     </footer>
-
-
   </div>
-<script>
-  const toggle = document.getElementById("theme-toggle");
-  const icon = document.getElementById("theme-icon");
-  const label = document.getElementById("theme-label");
-
-  function updateThemeButton() {
-    const theme = document.documentElement.dataset.theme;
-
-    if (theme === "dark") {
-      icon.textContent = "☀︎";
-      label.textContent = "Light";
-      toggle.setAttribute("aria-label", "Switch to light mode");
-    } else {
-      icon.textContent = "☾";
-      label.textContent = "Dark";
-      toggle.setAttribute("aria-label", "Switch to dark mode");
-    }
-  }
-
-  toggle.addEventListener("click", () => {
-    const currentTheme =
-      document.documentElement.dataset.theme;
-
-    const newTheme =
-      currentTheme === "dark"
-        ? "light"
-        : "dark";
-
-    document.documentElement.dataset.theme =
-      newTheme;
-
-    localStorage.setItem(
-      "schedshot-theme",
-      newTheme
-    );
-
-    updateThemeButton();
-  });
-
-  updateThemeButton();
-</script>
 </body>
 </html>

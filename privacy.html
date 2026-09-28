@@ -1,321 +1,218 @@
+<!doctype html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8" />
-
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1"
   />
-<script>
-  (() => {
-    const savedTheme = localStorage.getItem("schedshot-theme");
-
-    const theme =
-      savedTheme ||
-      (window.matchMedia("(prefers-color-scheme: light)").matches
-        ? "light"
-        : "dark");
-
-    document.documentElement.dataset.theme = theme;
-  })();
-</script>
   <title>
     Privacy Policy — SchedShot
   </title>
-
   <meta
     name="description"
     content="SchedShot Privacy Policy."
   />
-
   <link
     rel="icon"
     type="image/png"
     href="schedshot-icon.png"
   />
-
-<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<!-- privacy.html -->
 <body class="privacy-page">
-
   <div class="wrap">
-
-    <nav>
-
+    <nav aria-label="Main navigation">
       <a href="index.html" class="brand">
-
         <img
           class="brand-icon"
           src="schedshot-icon.png"
           alt="SchedShot"
         />
-
         SchedShot
-
       </a>
-
-
 <div class="nav-links">
-
   <a href="index.html">Home</a>
   <a href="support.html">Support</a>
-  <a href="privacy.html">Privacy</a>
-
+  <a href="privacy.html" aria-current="page">Privacy</a>
   <button
     class="theme-toggle"
     id="theme-toggle"
     type="button"
     aria-label="Switch appearance"
+    hidden
   >
-    <span id="theme-icon">☀︎</span>
+    <span id="theme-icon" aria-hidden="true">☀︎</span>
     <span class="theme-label" id="theme-label">Light</span>
   </button>
-
 </div>
     </nav>
-
-
     <main>
-
       <section class="hero">
-
         <div class="eyebrow">
-
           <span class="dot"></span>
-
           Private by design
-
         </div>
-
-
         <h1>
-
           Your schedule<br>
-
           <span class="gradient-text">
             stays yours.
           </span>
-
         </h1>
-
-
         <p>
           SchedShot is designed to perform its core
           functions directly on your device without
           collecting, storing, or transmitting your
           personal information to the developer.
         </p>
-
-
         <div class="updated">
           Effective September 25, 2026
         </div>
-
       </section>
-
-
-
       <section class="policy">
-
         <div class="policy-card">
-
-
           <div class="policy-section">
-
             <h2>
               Information Collection
             </h2>
-
             <p>
               SchedShot does not collect, store,
               transmit, sell, or share personal
               information.
             </p>
-
             <p>
               The app does not require an account and
               does not use advertising, tracking
               technologies, or third-party analytics
               services.
             </p>
-
             <div class="privacy-callout">
-
               <strong>
                 No account. No tracking.
                 No uploaded schedules.
               </strong>
-
               Your schedule processing happens on your
               device.
-
             </div>
-
           </div>
-
-
           <div class="policy-section">
-
             <h2>
               Screenshot and Image Processing
             </h2>
-
             <p>
               SchedShot allows you to provide screenshots
               or images containing work schedule
               information.
             </p>
-
             <p>
               Image and text recognition is performed
               locally on your device using Apple's Vision
               framework.
             </p>
-
             <p>
               Images and information extracted from them
               are not uploaded to SchedShot servers or
               transmitted to the developer.
             </p>
-
             <p>
               SchedShot does not maintain a remote copy
               of your screenshots or extracted schedule
               information.
             </p>
-
           </div>
-
-
           <div class="policy-section">
-
             <h2>
               Calendar Access
             </h2>
-
             <p>
               SchedShot requests access to your device's
               calendar so that it can read calendar
               information and create calendar events
               based on the schedules you provide.
             </p>
-
             <p>
               Calendar access may be used to:
             </p>
-
             <ul>
-
               <li>
                 Create calendar events from recognized
                 work shifts.
               </li>
-
               <li>
                 Read existing calendar events as
                 necessary for scheduling functionality.
               </li>
-
               <li>
                 Help prevent duplicate or conflicting
                 schedule entries.
               </li>
-
             </ul>
-
             <p>
               Calendar information is processed on your
               device and is not transmitted to the
               developer or to SchedShot servers.
             </p>
-
             <p>
               You can change or revoke SchedShot's
               calendar permissions at any time through
               your device's privacy settings.
             </p>
-
           </div>
-
-
           <div class="policy-section">
-
             <h2>
               Photos and Images
             </h2>
-
             <p>
               When you choose an image or screenshot for
               processing, SchedShot accesses only the
               content made available to the app through
               Apple's system interfaces and permissions.
             </p>
-
             <p>
               The selected content is used to identify
               schedule information and provide the app's
               requested functionality.
             </p>
-
             <p>
               SchedShot does not upload these images to
               the developer.
             </p>
-
           </div>
-
-
           <div class="policy-section">
-
             <h2>
               Data Sharing
             </h2>
-
             <p>
               Because SchedShot does not collect personal
               data, the developer does not sell, rent, or
               share personal data with advertisers, data
               brokers, or other third parties.
             </p>
-
           </div>
-
-
           <div class="policy-section">
-
             <h2>
               Tracking and Advertising
             </h2>
-
             <p>
               SchedShot does not track users across apps
               or websites.
             </p>
-
             <p>
               SchedShot does not contain third-party
               advertising and does not use user
               information for advertising or marketing
               purposes.
             </p>
-
           </div>
-
-
           <div class="policy-section">
-
             <h2>
               Children's Privacy
             </h2>
-
             <p>
               SchedShot does not knowingly collect
               personal information from children.
             </p>
-
             <p>
               Because the app does not collect personal
               information from its users, no personal
@@ -323,163 +220,81 @@
               transmitted to or retained by the
               developer.
             </p>
-
           </div>
-
-
           <div class="policy-section">
-
             <h2>
               Data Security
             </h2>
-
             <p>
               SchedShot is designed to minimize privacy
               risks by processing schedule information
               and images locally on your device rather
               than transmitting them to the developer.
             </p>
-
             <p>
               Your information may still be subject to
               the security and privacy practices of
               Apple and services you have configured on
               your device, such as iCloud Calendar.
             </p>
-
           </div>
-
-
           <div class="policy-section">
-
             <h2>
               Changes to This Privacy Policy
             </h2>
-
             <p>
               This Privacy Policy may be updated if
               SchedShot's features or data practices
               change.
             </p>
-
             <p>
               Any updated policy will include a revised
               effective date.
             </p>
-
           </div>
-
-
           <div class="policy-section">
-
             <h2>
               Contact
             </h2>
-
             <p>
               If you have questions or concerns about
               this Privacy Policy or SchedShot's privacy
               practices, contact:
             </p>
-
             <p>
-
               <span class="highlight">
                 Christopher Newman
               </span>
-
               <br>
-
               <a
                 class="contact"
                 href="mailto:schedshot@icloud.com"
               >
                 schedshot@icloud.com
               </a>
-
             </p>
-
           </div>
-
-
         </div>
-
       </section>
-
     </main>
-
   </div>
-
-
-
   <footer>
-
     <div class="wrap footer-row">
-
       <div>
         © 2026 Christopher Newman
       </div>
-
       <div class="footer-links">
-
         <a href="index.html">
           Home
         </a>
-
         <a href="support.html">
           Support
         </a>
-
         <a href="mailto:schedshot@icloud.com">
           Contact
         </a>
-
       </div>
-
     </div>
-
   </footer>
-
-<script>
-  const toggle = document.getElementById("theme-toggle");
-  const icon = document.getElementById("theme-icon");
-  const label = document.getElementById("theme-label");
-
-  function updateThemeButton() {
-    const theme = document.documentElement.dataset.theme;
-
-    if (theme === "dark") {
-      icon.textContent = "☀︎";
-      label.textContent = "Light";
-      toggle.setAttribute("aria-label", "Switch to light mode");
-    } else {
-      icon.textContent = "☾";
-      label.textContent = "Dark";
-      toggle.setAttribute("aria-label", "Switch to dark mode");
-    }
-  }
-
-  toggle.addEventListener("click", () => {
-    const currentTheme =
-      document.documentElement.dataset.theme;
-
-    const newTheme =
-      currentTheme === "dark"
-        ? "light"
-        : "dark";
-
-    document.documentElement.dataset.theme =
-      newTheme;
-
-    localStorage.setItem(
-      "schedshot-theme",
-      newTheme
-    );
-
-    updateThemeButton();
-  });
-
-  updateThemeButton();
-</script>
 </body>
 </html>
