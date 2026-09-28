@@ -1,15 +1,30 @@
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Support — SchedShot</title>
+  <meta charset="utf-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <title>
+    Support — SchedShot
+  </title>
+
   <meta
     name="description"
     content="Get help with SchedShot."
   />
 
+  <link
+    rel="icon"
+    type="image/png"
+    href="schedshot-icon.png"
+  />
+
   <style>
+
     :root {
       --bg: #07090d;
       --panel: #10141c;
@@ -32,17 +47,29 @@
 
     body {
       margin: 0;
+
       font-family:
         -apple-system,
         BlinkMacSystemFont,
         "SF Pro Display",
         "Segoe UI",
         sans-serif;
+
       background:
-        radial-gradient(circle at 15% 8%, rgba(46,168,255,.15), transparent 28%),
-        radial-gradient(circle at 85% 5%, rgba(49,230,255,.07), transparent 22%),
+        radial-gradient(
+          circle at 15% 8%,
+          rgba(46,168,255,.13),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 85% 5%,
+          rgba(49,230,255,.05),
+          transparent 22%
+        ),
         var(--bg);
+
       color: var(--text);
+
       min-height: 100vh;
     }
 
@@ -60,32 +87,43 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       padding: 28px 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
+
       gap: 12px;
+
       font-weight: 800;
+
       font-size: 1.05rem;
+
       letter-spacing: -0.02em;
     }
 
-    .brand-mark {
-      width: 36px;
-      height: 36px;
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+
       border-radius: 11px;
-      background: linear-gradient(145deg, var(--cyan), var(--blue));
+
+      object-fit: cover;
+
       box-shadow:
-        0 0 30px rgba(46,168,255,.3),
-        inset 0 1px 0 rgba(255,255,255,.35);
+        0 0 24px rgba(46,168,255,.17),
+        0 4px 12px rgba(0,0,0,.35);
     }
 
     .nav-links {
       display: flex;
+
       gap: 22px;
+
       color: var(--muted);
+
       font-size: .95rem;
     }
 
@@ -100,45 +138,75 @@
     .eyebrow {
       display: inline-flex;
       align-items: center;
+
       gap: 8px;
+
       padding: 8px 13px;
-      border: 1px solid var(--border);
+
+      border:
+        1px solid var(--border);
+
       border-radius: 999px;
-      background: rgba(255,255,255,.035);
+
+      background:
+        rgba(255,255,255,.035);
+
       color: #b8c3d1;
+
       font-size: .84rem;
+
       margin-bottom: 24px;
     }
 
     .dot {
       width: 8px;
       height: 8px;
+
       border-radius: 999px;
+
       background: var(--cyan);
-      box-shadow: 0 0 14px var(--cyan);
+
+      box-shadow:
+        0 0 14px var(--cyan);
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(3.3rem, 8vw, 6rem);
+
+      font-size:
+        clamp(3.3rem, 8vw, 6rem);
+
       line-height: .95;
+
       letter-spacing: -0.06em;
+
       font-weight: 850;
     }
 
     .gradient-text {
       background:
-        linear-gradient(100deg, #ffffff 15%, #8fdcff 55%, #ffffff 90%);
+        linear-gradient(
+          100deg,
+          #ffffff 15%,
+          #8fdcff 55%,
+          #ffffff 90%
+        );
+
       -webkit-background-clip: text;
       background-clip: text;
+
       color: transparent;
     }
 
     .hero p {
       max-width: 650px;
+
       margin: 25px 0 0;
+
       color: var(--muted);
+
       font-size: 1.12rem;
+
       line-height: 1.65;
     }
 
@@ -148,17 +216,30 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 16px;
     }
 
     .card {
       position: relative;
+
       overflow: hidden;
-      border: 1px solid var(--border);
+
+      border:
+        1px solid var(--border);
+
       border-radius: 26px;
+
       background:
-        linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.018));
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.045),
+          rgba(255,255,255,.018)
+        );
+
       padding: 28px;
     }
 
@@ -166,65 +247,98 @@
       grid-column: 1 / -1;
     }
 
-    .icon {
+    .support-icon {
       width: 44px;
       height: 44px;
+
       display: grid;
       place-items: center;
+
       border-radius: 13px;
+
       margin-bottom: 34px;
-      background: rgba(46,168,255,.12);
-      border: 1px solid rgba(46,168,255,.18);
+
+      background:
+        rgba(46,168,255,.12);
+
+      border:
+        1px solid rgba(46,168,255,.18);
+
       font-size: 1.2rem;
     }
 
-    .icon.green {
-      background: rgba(67,209,124,.1);
-      border-color: rgba(67,209,124,.18);
+    .support-icon.green {
+      background:
+        rgba(67,209,124,.1);
+
+      border-color:
+        rgba(67,209,124,.18);
     }
 
-    .icon.orange {
-      background: rgba(255,156,55,.1);
-      border-color: rgba(255,156,55,.18);
+    .support-icon.orange {
+      background:
+        rgba(255,156,55,.1);
+
+      border-color:
+        rgba(255,156,55,.18);
     }
 
     h2 {
       margin: 0 0 10px;
+
       font-size: 1.45rem;
+
       letter-spacing: -0.035em;
     }
 
     p {
       margin: 0;
+
       color: var(--muted);
+
       line-height: 1.7;
     }
 
     .button {
       display: inline-block;
+
       margin-top: 22px;
+
       padding: 13px 18px;
+
       border-radius: 14px;
+
       font-weight: 700;
-      border: 1px solid var(--border);
+
+      border:
+        1px solid var(--border);
+
       background: white;
+
       color: #05070a;
+
       transition: .18s ease;
     }
 
     .button:hover {
-      transform: translateY(-2px);
+      transform:
+        translateY(-2px);
     }
 
     .button.secondary {
-      background: rgba(255,255,255,.04);
+      background:
+        rgba(255,255,255,.04);
+
       color: white;
     }
 
     .tips {
       margin-top: 16px;
+
       padding-left: 20px;
+
       color: var(--muted);
+
       line-height: 1.7;
     }
 
@@ -234,28 +348,44 @@
 
     .privacy-callout {
       margin-top: 16px;
+
       padding: 20px;
+
       border-radius: 18px;
-      background: rgba(67,209,124,.06);
-      border: 1px solid rgba(67,209,124,.15);
+
+      background:
+        rgba(67,209,124,.06);
+
+      border:
+        1px solid rgba(67,209,124,.15);
     }
 
     .privacy-callout strong {
       display: block;
+
       margin-bottom: 6px;
+
       color: #b8f4cf;
     }
 
     footer {
-      border-top: 1px solid var(--border);
-      padding: 34px 0 50px;
+      border-top:
+        1px solid var(--border);
+
+      padding:
+        34px 0 50px;
+
       color: var(--muted);
     }
 
     .footer-row {
       display: flex;
-      justify-content: space-between;
+
+      justify-content:
+        space-between;
+
       gap: 30px;
+
       flex-wrap: wrap;
     }
 
@@ -269,8 +399,10 @@
     }
 
     @media (max-width: 700px) {
+
       .nav-links {
         gap: 14px;
+
         font-size: .85rem;
       }
 
@@ -285,8 +417,11 @@
       .card.large {
         grid-column: auto;
       }
+
     }
+
   </style>
+
 </head>
 
 <body>
@@ -294,130 +429,234 @@
   <div class="wrap">
 
     <nav>
-      <a href="index.html" class="brand">
-        <div class="brand-mark"></div>
+
+      <a
+        href="index.html"
+        class="brand"
+      >
+
+        <img
+          class="brand-icon"
+          src="schedshot-icon.png"
+          alt="SchedShot"
+        />
+
         SchedShot
+
       </a>
 
+
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="support.html">Support</a>
-        <a href="privacy.html">Privacy</a>
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="support.html">
+          Support
+        </a>
+
+        <a href="privacy.html">
+          Privacy
+        </a>
+
       </div>
+
     </nav>
+
 
     <main>
 
       <section class="hero">
 
         <div class="eyebrow">
+
           <span class="dot"></span>
+
           SchedShot Support
+
         </div>
 
+
         <h1>
+
           Need a hand?<br>
-          <span class="gradient-text">We're here.</span>
+
+          <span class="gradient-text">
+            We're here.
+          </span>
+
         </h1>
 
+
         <p>
-          Having trouble with SchedShot, found a bug, or have an idea for
-          something that would make the app better? Get in touch.
+          Having trouble with SchedShot, found a bug, or
+          have an idea for something that would make the
+          app better? Get in touch.
         </p>
 
       </section>
+
 
 
       <section class="support">
 
         <div class="grid">
 
-          <div class="card">
-            <div class="icon">✉</div>
 
-            <h2>Contact Support</h2>
+          <div class="card">
+
+            <div class="support-icon">
+              ✉
+            </div>
+
+            <h2>
+              Contact Support
+            </h2>
 
             <p>
-              The easiest way to get help is by email. Tell us what happened
-              and we'll take a look.
+              The easiest way to get help is by email.
+              Tell us what happened and we'll take a
+              look.
             </p>
 
-            <a class="button" href="mailto:schedshot@icloud.com">
+            <a
+              class="button"
+              href="mailto:schedshot@icloud.com"
+            >
               Email Support
             </a>
+
           </div>
 
 
           <div class="card">
-            <div class="icon green">✓</div>
 
-            <h2>Before You Send</h2>
+            <div class="support-icon green">
+              ✓
+            </div>
+
+            <h2>
+              Before You Send
+            </h2>
 
             <p>
-              A few details can make troubleshooting much faster.
+              A few details can make troubleshooting
+              much faster.
             </p>
 
             <ul class="tips">
-              <li>Your device model</li>
-              <li>Your iOS, iPadOS, or macOS version</li>
-              <li>A short description of what happened</li>
-              <li>A screenshot if it helps explain the issue</li>
+
+              <li>
+                Your device model
+              </li>
+
+              <li>
+                Your iOS, iPadOS, or macOS version
+              </li>
+
+              <li>
+                A short description of what happened
+              </li>
+
+              <li>
+                A screenshot if it helps explain
+                the issue
+              </li>
+
             </ul>
+
           </div>
 
 
           <div class="card">
-            <div class="icon orange">⌗</div>
 
-            <h2>Schedule Recognition</h2>
+            <div class="support-icon orange">
+              ⌗
+            </div>
+
+            <h2>
+              Schedule Recognition
+            </h2>
 
             <p>
-              If SchedShot doesn't recognize a shift correctly, try using a
-              clear screenshot with the dates, times, and schedule information
-              visible.
+              If SchedShot doesn't recognize a shift
+              correctly, try using a clear screenshot
+              with the dates, times, and schedule
+              information visible.
             </p>
+
           </div>
 
 
           <div class="card">
-            <div class="icon">◫</div>
 
-            <h2>Calendar Access</h2>
+            <div class="support-icon">
+              ◫
+            </div>
+
+            <h2>
+              Calendar Access
+            </h2>
 
             <p>
-              SchedShot needs calendar permission to read existing events and
-              create your work shifts.
+              SchedShot needs calendar permission to
+              read existing events and create your
+              work shifts.
             </p>
 
             <p style="margin-top:12px;">
-              You can review or change SchedShot's calendar access in your
-              device's privacy settings.
+              You can review or change SchedShot's
+              calendar access in your device's privacy
+              settings.
             </p>
+
           </div>
 
 
           <div class="card large">
 
-            <div class="icon green">●</div>
-
-            <h2>Your schedule stays private.</h2>
-
-            <p>
-              SchedShot processes schedule screenshots directly on your device
-              using Apple's Vision framework. Your screenshots and extracted
-              schedule information are not uploaded to SchedShot servers.
-            </p>
-
-            <div class="privacy-callout">
-              <strong>No accounts. No tracking. No uploaded schedules.</strong>
-              SchedShot is designed to keep schedule processing on your device.
+            <div class="support-icon green">
+              ●
             </div>
 
-            <a class="button secondary" href="privacy.html">
+            <h2>
+              Your schedule stays private.
+            </h2>
+
+            <p>
+              SchedShot processes schedule screenshots
+              directly on your device using Apple's
+              Vision framework.
+
+              Your screenshots and extracted schedule
+              information are not uploaded to
+              SchedShot servers.
+            </p>
+
+
+            <div class="privacy-callout">
+
+              <strong>
+                No accounts. No tracking.
+                No uploaded schedules.
+              </strong>
+
+              SchedShot is designed to keep schedule
+              processing on your device.
+
+            </div>
+
+
+            <a
+              class="button secondary"
+              href="privacy.html"
+            >
               Read the Privacy Policy
             </a>
 
           </div>
+
 
         </div>
 
@@ -428,6 +667,7 @@
   </div>
 
 
+
   <footer>
 
     <div class="wrap footer-row">
@@ -436,15 +676,27 @@
         © 2026 Christopher Newman
       </div>
 
+
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="mailto:schedshot@icloud.com">Contact</a>
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="privacy.html">
+          Privacy
+        </a>
+
+        <a href="mailto:schedshot@icloud.com">
+          Contact
+        </a>
+
       </div>
 
     </div>
 
   </footer>
+
 
 </body>
 </html>
