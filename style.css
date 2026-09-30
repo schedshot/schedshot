@@ -948,6 +948,129 @@ html[data-theme="dark"] .sched-tabs div.on {
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* The widgets feature: a full-width card with a drawing of the app's medium
+   widget beside the text, in the app's own colors. */
+.home-page .card.feature-wide {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.feature-wide-copy {
+  max-width: 460px;
+}
+
+.widget-mock {
+  --w-bg: #07090d;
+  --w-text: #f5f7fb;
+  --w-muted: #9aa4b2;
+  --w-accent: #31e6ff;
+  --w-job: #ff9c37;
+  --w-line: rgba(255, 255, 255, 0.1);
+  flex: none;
+  width: 340px;
+  height: 158px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 24px;
+  background: var(--w-bg);
+  color: var(--w-text);
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  text-align: left;
+  line-height: 1.2;
+}
+
+html[data-theme="light"] .widget-mock {
+  --w-bg: #f5f7fa;
+  --w-text: #0b3468;
+  --w-muted: #687482;
+  --w-accent: #007ba5;
+  --w-job: #e98418;
+  --w-line: rgba(11, 52, 104, 0.1);
+  box-shadow: 0 18px 50px rgba(11, 52, 104, 0.12);
+}
+
+.widget-next {
+  display: flex;
+  flex-direction: column;
+  padding-right: 12px;
+  border-right: 1px solid var(--w-line);
+}
+
+.widget-day {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--w-accent);
+}
+
+.widget-next b {
+  margin-top: auto;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.widget-end {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--w-muted);
+}
+
+.widget-place {
+  margin-top: auto;
+  font-size: 0.75rem;
+  color: var(--w-muted);
+}
+
+.widget-rows {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 12px;
+}
+
+.widget-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.widget-row b {
+  display: block;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.widget-row small {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--w-muted);
+}
+
+.widget-date {
+  width: 26px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.widget-date small {
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--w-accent);
+}
+
+.widget-row.job-2 .widget-date small {
+  color: var(--w-job);
+}
+
 
 /* ---------------------------------------------------------
    GENERIC CARDS
@@ -1436,6 +1559,15 @@ html[data-theme="light"] .highlight {
   }
   .home-page .card {
     min-height: 0;
+  }
+  .home-page .card.feature-wide {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .widget-mock {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
   }
   .support-page .card.large {
     grid-column: auto;
