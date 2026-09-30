@@ -414,12 +414,15 @@ h1 {
   display: block;
 }
 
+/* Both decks always stay on the page and keep animating, so they stay in step
+   with the sweep; only visibility changes (display:none would restart a deck's
+   animation each time the theme is switched). */
 html[data-theme="light"] .phone .deck-light {
-  display: block !important;
+  visibility: visible !important;
 }
 
 html[data-theme="light"] .phone .deck-dark {
-  display: none;
+  visibility: hidden;
 }
 
 /* The animated preview: the screen holds the app screenshot, with a fake
