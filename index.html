@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <script src="theme.js"></script>
-  <link rel="stylesheet" href="style.css?v=14">
+  <link rel="stylesheet" href="style.css?v=18">
 </head>
 <body class="home-page">
   <div class="wrap">
@@ -271,35 +271,32 @@
                 Your next shift, at a glance
               </h3>
               <p>
-                Add a SchedShot widget to your iPhone's Home
-                Screen or Lock Screen to see your next shift
-                and the ones after it without opening the app.
-                Widgets read your calendar right on your
-                iPhone and update when your schedule changes.
+                Add a SchedShot widget to your Home Screen or
+                Lock Screen to see your next shift and the ones
+                after it without opening the app. Three sizes,
+                in your job colors. Widgets read your calendar
+                right on your iPhone or iPad and update when
+                your schedule changes.
               </p>
             </div>
-            <!-- A drawing of the medium widget: the next shift big, then the
-                 three after it. -->
-            <div class="widget-mock" aria-hidden="true">
-              <div class="widget-next">
-                <span class="widget-day">Tomorrow</span>
-                <b>3:30 PM</b>
-                <span class="widget-end">to 9:30 PM</span>
-                <span class="widget-place">Riverside Café</span>
-              </div>
-              <div class="widget-rows">
-                <div class="widget-row">
-                  <span class="widget-date"><small>Fri</small>2</span>
-                  <span><b>5 PM – 11 PM</b><small>Riverside Café</small></span>
-                </div>
-                <div class="widget-row job-2">
-                  <span class="widget-date"><small>Sat</small>3</span>
-                  <span><b>9 AM – 3 PM</b><small>Pizza Place</small></span>
-                </div>
-                <div class="widget-row">
-                  <span class="widget-date"><small>Sun</small>4</span>
-                  <span><b>11:30 AM – 5 PM</b><small>Riverside Café</small></span>
-                </div>
+            <!-- The real widget designs in all three sizes, drawn by the app
+                 itself with fictional shifts, in the site's light or dark:
+                 a tilted, gently floating cluster over soft glows. -->
+            <div class="widget-stage">
+              <div class="widget-glow" aria-hidden="true"></div>
+              <div class="widget-cluster">
+                <figure class="widget-size large">
+                  <img class="w-dark" src="widget-large-dark.png" width="728" height="764" loading="lazy" alt="The large SchedShot widget: today's shift with a countdown, and four more coming up" />
+                  <img class="w-light" src="widget-large-light.png" width="728" height="764" loading="lazy" alt="The large SchedShot widget: today's shift with a countdown, and four more coming up" />
+                </figure>
+                <figure class="widget-size medium">
+                  <img class="w-dark" src="widget-medium-dark.png" width="728" height="340" loading="lazy" alt="The medium SchedShot widget: today's shift, plus the next three" />
+                  <img class="w-light" src="widget-medium-light.png" width="728" height="340" loading="lazy" alt="The medium SchedShot widget: today's shift, plus the next three" />
+                </figure>
+                <figure class="widget-size small">
+                  <img class="w-dark" src="widget-small-dark.png" width="340" height="340" loading="lazy" alt="The small SchedShot widget: today's shift, 11:00 AM to 5:00 PM at Riverside Café" />
+                  <img class="w-light" src="widget-small-light.png" width="340" height="340" loading="lazy" alt="The small SchedShot widget: today's shift, 11:00 AM to 5:00 PM at Riverside Café" />
+                </figure>
               </div>
             </div>
           </div>
