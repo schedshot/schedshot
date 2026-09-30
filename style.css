@@ -436,6 +436,142 @@ html[data-theme="light"] .phone .shot-dark {
   display: none;
 }
 
+/* The animated preview: the screen holds the app screenshot, with a fake
+   schedule screenshot on top that a sweeping light scans away. */
+.phone .screen {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+.phone .sched {
+  position: absolute;
+  inset: 0;
+  background: #f7f8fa;
+  color: #111820;
+  text-align: left;
+  animation: sched-scan 9s ease-in-out infinite;
+}
+
+.sched-status {
+  position: absolute;
+  top: 5.2cqw;
+  left: 18.5cqw;
+  font-size: 4.6cqw;
+  font-weight: 700;
+}
+
+.sched-title {
+  position: absolute;
+  top: 26cqw;
+  left: 6cqw;
+  font-size: 8.4cqw;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.sched-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 32cqw;
+  display: flex;
+  align-items: center;
+  gap: 6cqw;
+  padding: 0 6cqw;
+  border-top: 1px solid #e0e1e4;
+}
+
+/* The rows are the 3rd to 6th children (after the status bar and title). */
+.sched-row:nth-child(3) { top: 46cqw; }
+.sched-row:nth-child(4) { top: 78cqw; }
+.sched-row:nth-child(5) { top: 110cqw; }
+.sched-row:nth-child(6) { top: 142cqw; }
+
+.sched-date {
+  width: 15cqw;
+  display: grid;
+  justify-items: center;
+  line-height: 1.15;
+}
+
+.sched-date small {
+  font-size: 3.7cqw;
+  color: #2e7df6;
+}
+
+.sched-date b {
+  font-size: 8.6cqw;
+  font-weight: 500;
+}
+
+.sched-info b {
+  display: block;
+  font-size: 4.9cqw;
+  margin-bottom: 1.6cqw;
+}
+
+.sched-info span {
+  display: flex;
+  align-items: center;
+  gap: 2.2cqw;
+  font-size: 3.9cqw;
+  color: #6e727c;
+}
+
+.sched-info i {
+  width: 2.6cqw;
+  height: 2.6cqw;
+  border-radius: 50%;
+  background: #ef443a;
+}
+
+.phone .scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 26cqw;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(49, 230, 255, 0.10) 55%,
+      rgba(49, 230, 255, 0.55) 92%,
+      rgba(255, 255, 255, 0.9) 100%
+    );
+  margin-top: -26cqw;
+  animation: scan-line 9s ease-in-out infinite;
+}
+
+/* The schedule sits still, gets swept away from the top down, stays gone
+   while the app shows, then comes back for the next round. */
+@keyframes sched-scan {
+  0%, 14%    { clip-path: inset(0 0 0 0); opacity: 1; }
+  42%        { clip-path: inset(100% 0 0 0); opacity: 1; }
+  88%        { clip-path: inset(100% 0 0 0); opacity: 1; }
+  88.5%      { clip-path: inset(100% 0 0 0); opacity: 0; }
+  88.6%      { clip-path: inset(0 0 0 0); opacity: 0; }
+  100%       { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+
+@keyframes scan-line {
+  0%, 13%    { top: 0; opacity: 0; }
+  14%        { top: 0; opacity: 1; }
+  42%        { top: 100%; opacity: 1; }
+  44%, 100%  { top: 100%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phone .sched,
+  .phone .scan {
+    display: none;
+  }
+}
+
 .phone-title {
   font-size: 1.25rem;
   font-weight: 800;

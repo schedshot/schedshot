@@ -14,7 +14,7 @@
     href="schedshot-icon.png"
   />
 <script src="theme.js"></script>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body class="home-page">
   <div class="wrap">
@@ -86,13 +86,37 @@
               </p>
             </div>
             <div class="phone">
-              <!-- Real screenshots of the app. One shows at a time: the site's theme picks
-                   which. Sizes and the hiding are set here so it still works if an old
-                   stylesheet is cached. -->
-              <img class="shot-light" src="app-home-light.jpg" width="300" height="652" style="display: none"
-                alt="SchedShot's Upcoming shifts screen in light mode, listing shifts at Riverside Café" />
-              <img class="shot-dark" src="app-home-dark.jpg" width="300" height="652"
-                alt="SchedShot's Upcoming shifts screen in dark mode, listing shifts at Riverside Café" />
+              <!-- The phone plays a loop: a schedule screenshot is scanned by a sweeping
+                   light, revealing the app's Upcoming shifts screen. The app screenshots
+                   are real; one shows at a time to match the site's theme. Sizes and the
+                   hiding are set here so it still works if an old stylesheet is cached. -->
+              <div class="screen">
+                <img class="shot-light" src="app-home-light.jpg" width="300" height="652" style="display: none"
+                  alt="SchedShot's Upcoming shifts screen in light mode, listing shifts at Riverside Café" />
+                <img class="shot-dark" src="app-home-dark.jpg" width="300" height="652"
+                  alt="SchedShot's Upcoming shifts screen in dark mode, listing shifts at Riverside Café" />
+                <div class="sched" aria-hidden="true">
+                  <div class="sched-status">9:41</div>
+                  <div class="sched-title">My schedule</div>
+                  <div class="sched-row">
+                    <div class="sched-date"><small>Sep</small><small>Wed</small><b>30</b></div>
+                    <div class="sched-info"><b>11:00 am – 5:00 pm</b><span><i></i>Riverside Café</span></div>
+                  </div>
+                  <div class="sched-row">
+                    <div class="sched-date"><small>Oct</small><small>Fri</small><b>2</b></div>
+                    <div class="sched-info"><b>3:00 pm – 9:00 pm</b><span><i></i>Riverside Café</span></div>
+                  </div>
+                  <div class="sched-row">
+                    <div class="sched-date"><small>Oct</small><small>Sat</small><b>3</b></div>
+                    <div class="sched-info"><b>8:00 am – 2:00 pm</b><span><i></i>Riverside Café</span></div>
+                  </div>
+                  <div class="sched-row">
+                    <div class="sched-date"><small>Oct</small><small>Sun</small><b>4</b></div>
+                    <div class="sched-info"><b>9:00 am – 3:00 pm</b><span><i></i>Riverside Café</span></div>
+                  </div>
+                </div>
+                <div class="scan" aria-hidden="true"></div>
+              </div>
             </div>
           </div>
         </div>
