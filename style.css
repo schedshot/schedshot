@@ -948,6 +948,172 @@ html[data-theme="dark"] .sched-tabs div.on {
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* "For iPhone and iPad" under the hero buttons. */
+.platforms {
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* On iPhone and iPad: an iPad in a slim frame, with an iPhone standing in
+   front of its lower right corner. Each shows the dark or light screenshot
+   to match the site's theme. */
+.devices-shot {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 11% 40px 0;
+}
+
+.ipad-frame,
+.iphone-frame {
+  background: #020305;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45), 0 0 70px rgba(46, 168, 255, 0.12);
+}
+
+.ipad-frame {
+  padding: 2.2%;
+  border-radius: 34px;
+}
+
+.ipad-frame .dev-screen {
+  border-radius: 20px;
+}
+
+.iphone-frame {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 27%;
+  padding: 1.2%;
+  border-radius: 30px;
+}
+
+.iphone-frame .dev-screen {
+  border-radius: 24px;
+}
+
+/* Each screen stacks one deck per theme; each deck stacks its four header
+   pictures, and a cyan scan line sweeps down as the next one wipes in. */
+.dev-screen {
+  position: relative;
+  overflow: hidden;
+}
+
+.dev-deck img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dev-deck .d2,
+.dev-deck .d3,
+.dev-deck .d4 {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  clip-path: inset(0 0 100% 0);
+}
+
+.dev-deck.deck-light {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+}
+
+html[data-theme="light"] .dev-deck.deck-light {
+  visibility: visible;
+}
+
+html[data-theme="light"] .dev-deck.deck-dark {
+  visibility: hidden;
+}
+
+/* One 16 s loop, a step every 4 s: the second, third and fourth pictures
+   wipe in behind the sweep, then fade back to the first. The iPhone runs
+   2 s off from the iPad (and starts two pictures ahead), so the two never
+   match or sweep together. */
+.dev-deck .d2 { animation: dev-wipe-2 16s ease-in-out infinite; }
+.dev-deck .d3 { animation: dev-wipe-3 16s ease-in-out infinite; }
+.dev-deck .d4 { animation: dev-wipe-4 16s ease-in-out infinite; }
+
+.dev-scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 18%;
+  margin-top: -18%;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(49, 230, 255, 0.10) 55%,
+    rgba(49, 230, 255, 0.55) 92%, rgba(255, 255, 255, 0.9) 100%);
+  animation: dev-scan 16s ease-in-out infinite;
+}
+
+.iphone-frame .dev-deck img,
+.iphone-frame .dev-scan {
+  animation-delay: -2s;
+}
+
+@keyframes dev-wipe-2 {
+  0%, 21%   { clip-path: inset(0 0 100% 0); opacity: 1; }
+  27%, 96%  { clip-path: inset(0 0 0 0); opacity: 1; }
+  99.9%     { clip-path: inset(0 0 0 0); opacity: 0; }
+  100%      { clip-path: inset(0 0 100% 0); opacity: 0; }
+}
+
+@keyframes dev-wipe-3 {
+  0%, 46%   { clip-path: inset(0 0 100% 0); opacity: 1; }
+  52%, 96%  { clip-path: inset(0 0 0 0); opacity: 1; }
+  99.9%     { clip-path: inset(0 0 0 0); opacity: 0; }
+  100%      { clip-path: inset(0 0 100% 0); opacity: 0; }
+}
+
+@keyframes dev-wipe-4 {
+  0%, 71%   { clip-path: inset(0 0 100% 0); opacity: 1; }
+  77%, 96%  { clip-path: inset(0 0 0 0); opacity: 1; }
+  99.9%     { clip-path: inset(0 0 0 0); opacity: 0; }
+  100%      { clip-path: inset(0 0 100% 0); opacity: 0; }
+}
+
+@keyframes dev-scan {
+  0%, 20.9% { top: 0; opacity: 0; }
+  21%       { top: 0; opacity: 1; }
+  27%       { top: 100%; opacity: 1; }
+  27.4%     { top: 100%; opacity: 0; }
+  45.9%     { top: 0; opacity: 0; }
+  46%       { top: 0; opacity: 1; }
+  52%       { top: 100%; opacity: 1; }
+  52.4%     { top: 100%; opacity: 0; }
+  70.9%     { top: 0; opacity: 0; }
+  71%       { top: 0; opacity: 1; }
+  77%       { top: 100%; opacity: 1; }
+  77.4%, 100% { top: 100%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dev-deck .d2,
+  .dev-deck .d3,
+  .dev-deck .d4,
+  .dev-scan {
+    animation: none;
+  }
+}
+
+html[data-theme="light"] .ipad-frame,
+html[data-theme="light"] .iphone-frame {
+  box-shadow: 0 30px 80px rgba(11, 52, 104, 0.18), 0 0 70px rgba(22, 143, 229, 0.1);
+}
+
+@media (max-width: 760px) {
+  .ipad-frame { border-radius: 22px; }
+  .ipad-frame .dev-screen { border-radius: 13px; }
+  .iphone-frame { border-radius: 18px; }
+  .iphone-frame .dev-screen { border-radius: 14px; }
+}
+
 /* The widgets feature: a full-width card with a drawing of the app's medium
    widget beside the text, in the app's own colors. */
 .home-page .card.feature-wide {
