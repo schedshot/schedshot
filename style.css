@@ -654,6 +654,12 @@ h1 {
    above and below, so the text around it keeps an even rhythm. */
 .policy-section .privacy-callout {
   margin: 20px 0;
+  /* The same line spacing as the paragraphs around it. */
+  line-height: 1.75;
+}
+
+.policy-section .privacy-callout strong {
+  margin-bottom: 2px;
 }
 
 .policy-section .privacy-callout:last-child {
@@ -701,6 +707,20 @@ h1 {
 .support-icon {
   margin-bottom: 34px;
   font-size: 1.2rem;
+}
+
+.support-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--blue);
+}
+
+.support-icon.green svg {
+  color: var(--green);
+}
+
+.support-icon.orange svg {
+  color: var(--orange);
 }
 
 .support-icon.green {
