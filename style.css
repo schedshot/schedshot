@@ -514,6 +514,14 @@ h1 {
   margin-bottom: 40px;
 }
 
+/* Line icons drawn to match the app's SF Symbols (which can't be used on
+   the web). */
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--blue);
+}
+
 .card h3 {
   margin: 0 0 8px;
   font-size: 1.25rem;
@@ -640,6 +648,16 @@ h1 {
   background: rgba(67, 209, 124, 0.06);
   border:
     1px solid rgba(67, 209, 124, 0.15);
+}
+
+/* A callout in the middle of a policy section: the same breathing room
+   above and below, so the text around it keeps an even rhythm. */
+.policy-section .privacy-callout {
+  margin: 20px 0;
+}
+
+.policy-section .privacy-callout:last-child {
+  margin-bottom: 0;
 }
 
 .privacy-callout strong {
