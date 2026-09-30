@@ -426,12 +426,10 @@ h1 {
   border-radius: 32px;
 }
 
-.phone .shot-light {
-  display: none;
-}
-
+/* Dark is the default; the light one is hidden in the page itself and shown
+   here when the site is in light mode. */
 html[data-theme="light"] .phone .shot-light {
-  display: block;
+  display: block !important;
 }
 
 html[data-theme="light"] .phone .shot-dark {

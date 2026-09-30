@@ -14,7 +14,7 @@
     href="schedshot-icon.png"
   />
 <script src="theme.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body class="home-page">
   <div class="wrap">
@@ -86,10 +86,12 @@
               </p>
             </div>
             <div class="phone">
-              <!-- Real screenshots of the app; the site's theme picks which one shows. -->
-              <img class="shot-light" src="app-home-light.jpg" width="780" height="1695"
+              <!-- Real screenshots of the app. One shows at a time: the site's theme picks
+                   which. Sizes and the hiding are set here so it still works if an old
+                   stylesheet is cached. -->
+              <img class="shot-light" src="app-home-light.jpg" width="300" height="652" style="display: none"
                 alt="SchedShot's Upcoming shifts screen in light mode, listing shifts at Riverside Café" />
-              <img class="shot-dark" src="app-home-dark.jpg" width="780" height="1695"
+              <img class="shot-dark" src="app-home-dark.jpg" width="300" height="652"
                 alt="SchedShot's Upcoming shifts screen in dark mode, listing shifts at Riverside Café" />
             </div>
           </div>
