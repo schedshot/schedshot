@@ -14,7 +14,7 @@
     href="schedshot-icon.png"
   />
 <script src="theme.js"></script>
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body class="home-page">
   <div class="wrap">
@@ -87,32 +87,92 @@
             </div>
             <div class="phone">
               <!-- The phone plays a loop: a schedule screenshot is scanned by a sweeping
-                   light, revealing the app's Upcoming shifts screen. The app screenshots
-                   are real; one shows at a time to match the site's theme. Sizes and the
-                   hiding are set here so it still works if an old stylesheet is cached. -->
+                   light, revealing the app's Upcoming shifts screen, then each header
+                   (workers, flowers, shapes, winter) wipes in over the last, and it
+                   returns to the schedule. The app screenshots are real; one set (light or
+                   dark) shows to match the site's theme. Sizes and the hiding are set here
+                   so it still works if an old stylesheet is cached. -->
               <div class="screen">
-                <img class="shot-light" src="app-home-light.jpg" width="300" height="652" style="display: none"
-                  alt="SchedShot's Upcoming shifts screen in light mode, listing shifts at Riverside Café" />
-                <img class="shot-dark" src="app-home-dark.jpg" width="300" height="652"
-                  alt="SchedShot's Upcoming shifts screen in dark mode, listing shifts at Riverside Café" />
+                <div class="deck deck-dark">
+                  <img class="h1" src="app-workers-dark.jpg" width="300" height="652" alt="SchedShot's Upcoming shifts screen in dark mode with the workers header" />
+                  <img class="h2" src="app-flowers-dark.jpg" width="300" height="652" alt="SchedShot's Upcoming shifts screen in dark mode with the flowers header" aria-hidden="true"
+                    style="position: absolute; inset: 0; width: 100%; height: 100%; clip-path: inset(0 0 100% 0)" />
+                  <img class="h3" src="app-shapes-dark.jpg" width="300" height="652" alt="SchedShot's Upcoming shifts screen in dark mode with the shapes header" aria-hidden="true"
+                    style="position: absolute; inset: 0; width: 100%; height: 100%; clip-path: inset(0 0 100% 0)" />
+                  <img class="h4" src="app-winter-dark.jpg" width="300" height="652" alt="SchedShot's Upcoming shifts screen in dark mode with the winter header" aria-hidden="true"
+                    style="position: absolute; inset: 0; width: 100%; height: 100%; clip-path: inset(0 0 100% 0)" />
+                </div>
+                <div class="deck deck-light" style="display: none">
+                  <img class="h1" src="app-workers-light.jpg" width="300" height="652" alt="SchedShot's Upcoming shifts screen in light mode with the workers header" />
+                  <img class="h2" src="app-flowers-light.jpg" width="300" height="652" alt="SchedShot's Upcoming shifts screen in light mode with the flowers header" aria-hidden="true"
+                    style="position: absolute; inset: 0; width: 100%; height: 100%; clip-path: inset(0 0 100% 0)" />
+                  <img class="h3" src="app-shapes-light.jpg" width="300" height="652" alt="SchedShot's Upcoming shifts screen in light mode with the shapes header" aria-hidden="true"
+                    style="position: absolute; inset: 0; width: 100%; height: 100%; clip-path: inset(0 0 100% 0)" />
+                  <img class="h4" src="app-winter-light.jpg" width="300" height="652" alt="SchedShot's Upcoming shifts screen in light mode with the winter header" aria-hidden="true"
+                    style="position: absolute; inset: 0; width: 100%; height: 100%; clip-path: inset(0 0 100% 0)" />
+                </div>
                 <div class="sched" aria-hidden="true">
-                  <div class="sched-status">9:41</div>
-                  <div class="sched-title">My schedule</div>
-                  <div class="sched-row">
-                    <div class="sched-date"><small>Sep</small><small>Wed</small><b>30</b></div>
-                    <div class="sched-info"><b>11:00 am – 5:00 pm</b><span><i></i>Riverside Café</span></div>
+                  <div class="sched-status">
+                    <span>9:41</span>
+                    <svg viewBox="0 0 66 12" fill="currentColor">
+                      <rect x="0" y="8" width="3" height="4" rx=".7" /><rect x="5" y="6" width="3" height="6" rx=".7" />
+                      <rect x="10" y="3" width="3" height="9" rx=".7" /><rect x="15" y="0" width="3" height="12" rx=".7" />
+                      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                        <path d="M24 4.4a11 11 0 0 1 16 0" /><path d="M26.7 7.2a7 7 0 0 1 10.6 0" />
+                      </g>
+                      <circle cx="32" cy="10.2" r="1.5" />
+                      <rect x="45" y="1.4" width="18" height="9.2" rx="2.7" fill="none" stroke="currentColor" opacity=".45" />
+                      <rect x="46.6" y="3" width="13" height="6" rx="1.5" fill="#34c759" />
+                      <rect x="64.2" y="4.4" width="1.6" height="3.2" rx=".8" opacity=".45" />
+                    </svg>
                   </div>
-                  <div class="sched-row">
-                    <div class="sched-date"><small>Oct</small><small>Fri</small><b>2</b></div>
-                    <div class="sched-info"><b>3:00 pm – 9:00 pm</b><span><i></i>Riverside Café</span></div>
+                  <div class="sched-nav"><em>JD</em><b>My schedule</b><u><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.6 2H4.4z" /><path d="M10 20.5a2 2 0 0 0 4 0" /></svg></u></div>
+                  <div class="sched-week"><span>‹</span>Sep 28 – Oct 4, 2026<span>›</span></div>
+                  <div class="sched-strip">
+                    <div class="d has"><small>M</small><b>28</b><i></i></div>
+                    <div class="d"><small>T</small><b>29</b><i></i></div>
+                    <div class="d on has"><small>W</small><b>30</b><i></i></div>
+                    <div class="d"><small>T</small><b>1</b><i></i></div>
+                    <div class="d has"><small>F</small><b>2</b><i></i></div>
+                    <div class="d has"><small>S</small><b>3</b><i></i></div>
+                    <div class="d has"><small>S</small><b>4</b><i></i></div>
                   </div>
-                  <div class="sched-row">
-                    <div class="sched-date"><small>Oct</small><small>Sat</small><b>3</b></div>
-                    <div class="sched-info"><b>8:00 am – 2:00 pm</b><span><i></i>Riverside Café</span></div>
+                  <div class="sched-list">
+                    <div class="day">
+                      <div class="day-head"><b>Mon, Sep 28</b><span>6.0 h</span></div>
+                      <div class="day-card"><b>7:00 AM – 1:00 PM</b><span><em>Barista</em>Riverside Café</span></div>
+                    </div>
+                    <div class="day">
+                      <div class="day-head"><b>Tue, Sep 29</b><span></span></div>
+                      <div class="day-none">No shifts scheduled</div>
+                    </div>
+                    <div class="day">
+                      <div class="day-head"><b>Wed, Sep 30</b><i>Today</i><span>6.0 h</span></div>
+                      <div class="day-card"><b>11:00 AM – 5:00 PM</b><span><em>Barista</em>Riverside Café</span></div>
+                    </div>
+                    <div class="day">
+                      <div class="day-head"><b>Thu, Oct 1</b><span></span></div>
+                      <div class="day-none">No shifts scheduled</div>
+                    </div>
+                    <div class="day">
+                      <div class="day-head"><b>Fri, Oct 2</b><span>6.0 h</span></div>
+                      <div class="day-card"><b>3:00 PM – 9:00 PM</b><span><em>Barista</em>Riverside Café</span></div>
+                    </div>
+                    <div class="day">
+                      <div class="day-head"><b>Sat, Oct 3</b><span>6.0 h</span></div>
+                      <div class="day-card"><b>8:00 AM – 2:00 PM</b><span><em>Barista</em>Riverside Café</span></div>
+                    </div>
+                    <div class="day">
+                      <div class="day-head"><b>Sun, Oct 4</b><span>6.0 h</span></div>
+                      <div class="day-card"><b>9:00 AM – 3:00 PM</b><span><em>Barista</em>Riverside Café</span></div>
+                    </div>
                   </div>
-                  <div class="sched-row">
-                    <div class="sched-date"><small>Oct</small><small>Sun</small><b>4</b></div>
-                    <div class="sched-info"><b>9:00 am – 3:00 pm</b><span><i></i>Riverside Café</span></div>
+                  <div class="sched-total"><span>Scheduled this week</span><b>30.0 hrs</b></div>
+                  <div class="sched-tabs">
+                    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" /></svg>Home</div>
+                    <div class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3" /><path d="M3.5 10h17M8 3v4M16 3v4" /></svg>Schedule</div>
+                    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></svg>Time Off</div>
+                    <div><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="12" r="1.7" /><circle cx="12" cy="12" r="1.7" /><circle cx="18" cy="12" r="1.7" /></svg>More</div>
                   </div>
                 </div>
                 <div class="scan" aria-hidden="true"></div>
