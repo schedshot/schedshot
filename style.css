@@ -716,6 +716,64 @@ html[data-theme="light"] .phone .deck-dark {
   height: 6.2cqw;
 }
 
+/* In the site's dark mode the fake schedule app is in dark mode too; light
+   mode keeps the styles above. */
+html[data-theme="dark"] .phone .sched {
+  background: #0b0d11;
+  color: #f2f4f7;
+}
+
+html[data-theme="dark"] .sched-nav u {
+  border-color: #2c313a;
+  color: #a4acb8;
+}
+
+html[data-theme="dark"] .sched-week,
+html[data-theme="dark"] .day-head span,
+html[data-theme="dark"] .sched-total {
+  color: #8e96a3;
+}
+
+html[data-theme="dark"] .sched-week span,
+html[data-theme="dark"] .sched-strip small,
+html[data-theme="dark"] .day-none {
+  color: #6b7380;
+}
+
+html[data-theme="dark"] .day-head i {
+  background: #12304f;
+  color: #7cc3ff;
+}
+
+html[data-theme="dark"] .day-card {
+  background: #14202e;
+}
+
+html[data-theme="dark"] .day-card span {
+  color: #a4acb8;
+}
+
+html[data-theme="dark"] .sched-total b {
+  color: #f2f4f7;
+}
+
+html[data-theme="dark"] .sched-total,
+html[data-theme="dark"] .sched-tabs {
+  border-top-color: #22272f;
+}
+
+html[data-theme="dark"] .sched-tabs {
+  background: #15181d;
+}
+
+html[data-theme="dark"] .sched-tabs div {
+  color: #6b7380;
+}
+
+html[data-theme="dark"] .sched-tabs div.on {
+  color: #3ea6f2;
+}
+
 .phone .scan {
   position: absolute;
   left: 0;
