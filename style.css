@@ -350,34 +350,14 @@ h1 {
    --------------------------------------------------------- */
 
 .app-preview {
+  /* No panel around it: the text and phone sit straight on the page. */
   margin: 60px auto 0;
   max-width: 920px;
-  border-radius: 32px;
-  border: 1px solid var(--border);
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.06),
-      rgba(255, 255, 255, 0.025)
-    );
-  box-shadow:
-    0 30px 100px rgba(0, 0, 0, 0.45),
-    0 0 80px rgba(46, 168, 255, 0.06);
-  padding: 24px;
-  overflow: hidden;
 }
 
 .mock-window {
   min-height: 420px;
-  border-radius: 24px;
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(46, 168, 255, 0.12),
-      transparent 35%
-    ),
-    #0b0f15;
-  padding: 48px;
+  padding: 24px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
@@ -578,12 +558,6 @@ html[data-theme="light"] .phone .shot-dark {
 .mock-copy {
   position: relative;
   z-index: 2;
-}
-
-.mock-copy h2,
-.mock-copy p {
-  /* A soft halo in the page color, so the text stays clear where it overlaps. */
-  text-shadow: 0 2px 22px var(--bg), 0 0 8px var(--bg);
 }
 
 .phone {
@@ -1058,27 +1032,6 @@ html[data-theme="light"] .policy-card {
     );
   box-shadow:
     0 25px 70px rgba(20, 35, 55, 0.08);
-}
-
-html[data-theme="light"] .app-preview {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.98),
-      rgba(245, 248, 251, 0.96)
-    );
-  box-shadow:
-    0 30px 80px rgba(20, 35, 55, 0.10);
-}
-
-html[data-theme="light"] .mock-window {
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(46, 168, 255, 0.12),
-      transparent 35%
-    ),
-    #eef3f7;
 }
 
 html[data-theme="light"] .phone {
