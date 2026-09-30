@@ -402,7 +402,7 @@ h1 {
 }
 
 .phone {
-  width: min(260px, 100%);
+  width: min(300px, 100%);
   margin: auto;
   border-radius: 34px;
   background: #020305;
@@ -410,6 +410,32 @@ h1 {
   padding: 16px;
   box-shadow:
     0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* Screenshots of the app inside the phone frame: light or dark to match the
+   site's theme. */
+.phone {
+  padding: 8px;
+  border-radius: 40px;
+}
+
+.phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 32px;
+}
+
+.phone .shot-light {
+  display: none;
+}
+
+html[data-theme="light"] .phone .shot-light {
+  display: block;
+}
+
+html[data-theme="light"] .phone .shot-dark {
+  display: none;
 }
 
 .phone-title {
