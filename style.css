@@ -572,6 +572,33 @@ html[data-theme="light"] .phone .shot-dark {
   }
 }
 
+/* The phone leans back, and on wide screens slides left so the headline and
+   description sit in front of its edge. On narrow screens the text stacks
+   above it, so it only tilts a little. */
+.mock-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.mock-copy h2,
+.mock-copy p {
+  /* A soft halo in the page color, so the text stays clear where it overlaps. */
+  text-shadow: 0 2px 22px var(--bg), 0 0 8px var(--bg);
+}
+
+.phone {
+  position: relative;
+  z-index: 1;
+  transform: rotate(-8deg);
+}
+
+@media (min-width: 761px) {
+  .phone {
+    margin: 30px 0 30px auto;
+    transform: translateX(-26%) rotate(-14deg);
+  }
+}
+
 .phone-title {
   font-size: 1.25rem;
   font-weight: 800;
