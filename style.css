@@ -69,6 +69,15 @@ a {
   text-decoration: none;
 }
 
+/* Links inside running text (policy paragraphs, cards, callouts). */
+.policy-section p a,
+.card p a,
+.privacy-callout a {
+  color: var(--cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 
 /* ---------------------------------------------------------
    PAGE WIDTHS
